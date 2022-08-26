@@ -1,7 +1,7 @@
 export const fonts = {
-  body: "Amiri_400Regular",
-  heading: "Amiri_700Bold",
-  monospace: "Amiri_400Regular",
+  body: "Changa_500Medium",
+  heading: "Changa_700Bold",
+  monospace: "Changa_500Medium",
 };
 
 export const fontWeights = {
