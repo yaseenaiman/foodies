@@ -3,7 +3,7 @@
   "next_page_token": "some token",
   "results": [
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+      "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 33.3104805,
@@ -20,7 +20,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
+      "icon": "https://cdn3.iconfinder.com/data/icons/people-set-2-1/100/Dinner-512.png",
       "name": "مطعم اهواك",
       "opening_hours": {
         "open_now": true
@@ -56,7 +56,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
+      "icon": "https://cdn3.iconfinder.com/data/icons/people-set-2-1/100/Dinner-512.png",
       "name": "مطعم رويال كالاكسي",
       "photos": [
         {
@@ -86,7 +86,7 @@
       "vicinity": "المنصور/شارع 14 رمضان, بغداد"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+      "business_status": "CLOSED_TEMPORARILY",
       "geometry": {
         "location": {
           "lat": 33.3104805,
@@ -103,10 +103,10 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
+      "icon": "https://cdn3.iconfinder.com/data/icons/people-set-2-1/100/Dinner-512.png",
       "name": "اسرار آدم",
       "opening_hours": {
-        "open_now": false
+        "open_now": true
       },
       "photos": [
         {
@@ -136,7 +136,7 @@
       "vicinity": "الجادرية/قرب بناية البنك المركزي, بغداد"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+      "business_status": "CLOSED_TEMPORARILY",
       "geometry": {
       "location": {
           "lat": 33.3104805,
@@ -156,7 +156,7 @@
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
       "name": "The Glorious Inn",
       "opening_hours": {
-        "open_now": false
+        "open_now": true
       },
       "photos": [
         {
@@ -173,7 +173,7 @@
       "vicinity": "De Burburestraat 4A, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+      "business_status": "CLOSED_TEMPORARILY",
       "geometry": {
       "location": {
           "lat": 33.3104805,
@@ -211,7 +211,7 @@
       "vicinity": "Leopold de Waelplaats 34, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+      "business_status": "OPERATIONAL",
       "geometry": {
       "location": {
           "lat": 33.3104805,
@@ -249,7 +249,7 @@
       "vicinity": "Wijngaardstraat 8, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+      "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.215643,
@@ -286,7 +286,7 @@
       "vicinity": "Sint-Antoniusstraat 8, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+     "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.21939859999999,
@@ -324,7 +324,7 @@
       "vicinity": "Pelgrimstraat 28, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+     "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.2205556,
@@ -362,7 +362,7 @@
       "vicinity": "Lijnwaadmarkt 2, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+     "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.21901699999999,
@@ -406,7 +406,7 @@
       "vicinity": "Reyndersstraat 24, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+      "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.2141321,
@@ -456,7 +456,7 @@
       "vicinity": "Nieuwstad 8, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+      "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.21892750000001,
@@ -506,7 +506,7 @@
       "vicinity": "Ernest Van Dijckkaai 37, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+     "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.22667930000001,
@@ -550,7 +550,7 @@
       "vicinity": "Oudeleeuwenrui 12, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+     "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.2164307,
@@ -594,7 +594,7 @@
       "vicinity": "Hopland 2, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+      "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.220236,
@@ -638,7 +638,7 @@
       "vicinity": "Oude Koornmarkt 16, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+      "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.2129287,
@@ -689,7 +689,7 @@
       "vicinity": "Scheldestraat 15, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+      "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.2103946,
@@ -739,7 +739,7 @@
       "vicinity": "Kasteelpleinstraat 45/47, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+      "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.21393579999999,
@@ -783,7 +783,7 @@
       "vicinity": "Leopoldstraat 24, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+      "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.219929,
@@ -827,7 +827,7 @@
       "vicinity": "Jan Blomstraat 8, Antwerpen"
     },
     {
-      "business_status": "جاهز لاستقبال الضيوف",
+     "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
           "lat": 51.2193315,
