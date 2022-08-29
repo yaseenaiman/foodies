@@ -3,6 +3,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text } from "./src/components/typography/text.components";
+import { restaurantsRequest } from "./src/services/restaurants/restaurants.service";
 
 import {
   useFonts as useChanga,
