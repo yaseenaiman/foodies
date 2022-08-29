@@ -3,7 +3,6 @@ import React from "react";
 import { ThemeProvider } from "styled-components/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text } from "./src/components/typography/text.components";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import {
   useFonts as useChanga,
@@ -18,8 +17,24 @@ import { theme } from "./src/infrastructure/theme";
 import { RestaurantsScreen } from "./src/features/restaurants/screens/restaurants.screen";
 import { SafeArea } from "./src/components/utility/safe-area.component";
 import { NavigationContainer } from "@react-navigation/native";
+import { Ionicons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
+
+const TAB_ICON = {
+  المطاعم: "md-restaurant",
+  الموقع: "md-map",
+  الاعدادات: "md-settings",
+};
+
+const createScreenOptions = ({ route }) => {
+  const iconName = TAB_ICON[route.name];
+  return {
+    tabBarIcon: ({ size, color }) => (
+      <Ionicons name={iconName} size={size} color={color} />
+    ),
+  };
+};
 
 const Settings = () => (
   <SafeArea>
@@ -28,7 +43,7 @@ const Settings = () => (
 );
 const Map = () => (
   <SafeArea>
-    <Text>الخارطة</Text>
+    <Text>الموقع</Text>
   </SafeArea>
 );
 export default function App() {
@@ -48,22 +63,32 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <NavigationContainer>
-          <Tab.Navigator initialRoutrName="RestaurantsScreen">
+          <Tab.Navigator
+            initialRouteName="المطاعم"
+            screenOptions={createScreenOptions}
+            tabBarOptions={{
+              activeTintColor: "tomato",
+              inactiveTintColor: "gray",
+              labelStyle: {
+                fontFamily: "Changa_500Medium",
+              },
+            }}
+          >
             <Tab.Screen
+              options={{ headerShown: false }}
               name="الاعدادات"
               component={Settings}
-              options={{
-                tabBarIcon: ({ color }) => (
-                  <MaterialCommunityIcons
-                    name="settings"
-                    color={color}
-                    size={26}
-                  />
-                ),
-              }}
             />
-            <Tab.Screen name="الخارطة" component={Map} />
-            <Tab.Screen name="المطاعم" component={RestaurantsScreen} />
+            <Tab.Screen
+              options={{ headerShown: false }}
+              name="الموقع"
+              component={Map}
+            />
+            <Tab.Screen
+              options={{ headerShown: false }}
+              name="المطاعم"
+              component={RestaurantsScreen}
+            />
           </Tab.Navigator>
         </NavigationContainer>
       </ThemeProvider>
