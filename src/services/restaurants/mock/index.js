@@ -2,8 +2,8 @@ import baghdad from "./baghdad.json";
 import erbil from "./erbil.json";
 
 export const mocks = {
-  "33.3152, 44.3661": baghdad,
-  "36.1901,43.9930": erbil,
+  "33.3152,44.3661": baghdad,
+  "36.1901,43.993": erbil,
 };
 
 export const mockImages = [

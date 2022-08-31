@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text } from "./src/components/typography/text.components";
 import { RestaurantsContextProvider } from "./src/services/restaurants/restaurants.context";
+import { LocationContextProvider } from "./src/services/location/location.context";
 
 import {
   useFonts as useChanga,
@@ -63,37 +64,39 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <RestaurantsContextProvider>
-          <NavigationContainer>
-            <Tab.Navigator
-              initialRouteName="المطاعم"
-              screenOptions={createScreenOptions}
-              tabBarOptions={{
-                activeTintColor: "tomato",
-                inactiveTintColor: "gray",
-                labelStyle: {
-                  fontFamily: "Changa_500Medium",
-                },
-              }}
-            >
-              <Tab.Screen
-                options={{ headerShown: false }}
-                name="الاعدادات"
-                component={Settings}
-              />
-              <Tab.Screen
-                options={{ headerShown: false }}
-                name="الموقع"
-                component={Map}
-              />
-              <Tab.Screen
-                options={{ headerShown: false }}
-                name="المطاعم"
-                component={RestaurantsScreen}
-              />
-            </Tab.Navigator>
-          </NavigationContainer>
-        </RestaurantsContextProvider>
+        <LocationContextProvider>
+          <RestaurantsContextProvider>
+            <NavigationContainer>
+              <Tab.Navigator
+                initialRouteName="المطاعم"
+                screenOptions={createScreenOptions}
+                tabBarOptions={{
+                  activeTintColor: "tomato",
+                  inactiveTintColor: "gray",
+                  labelStyle: {
+                    fontFamily: "Changa_500Medium",
+                  },
+                }}
+              >
+                <Tab.Screen
+                  options={{ headerShown: false }}
+                  name="الاعدادات"
+                  component={Settings}
+                />
+                <Tab.Screen
+                  options={{ headerShown: false }}
+                  name="الموقع"
+                  component={Map}
+                />
+                <Tab.Screen
+                  options={{ headerShown: false }}
+                  name="المطاعم"
+                  component={RestaurantsScreen}
+                />
+              </Tab.Navigator>
+            </NavigationContainer>
+          </RestaurantsContextProvider>
+        </LocationContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>

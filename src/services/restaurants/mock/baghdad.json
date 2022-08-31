@@ -90,7 +90,7 @@
       "geometry": {
         "location": {
           "lat": 33.3104805,
-          "lng": 4.405177
+          "lng": 44.3389056
         },
         "viewport": {
           "northeast": {
@@ -133,7 +133,7 @@
         "establishment"
       ],
       "user_ratings_total": 321,
-      "vicinity": "الجادرية/قرب بناية البنك المركزي, بغداد"
+      "vicinity": "الجادرية/مقابل بناية البنك المركزي, بغداد"
     },
     {
       "business_status": "CLOSED_TEMPORARILY",
@@ -362,7 +362,7 @@
       "vicinity": "Lijnwaadmarkt 2, Antwerpen"
     },
     {
-     "business_status": "OPERATIONAL",
+     "business_status": "CLOSED_TEMPORARILY",
       "geometry": {
         "location": {
           "lat": 51.21901699999999,
@@ -382,7 +382,7 @@
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
       "name": "'t Fornuis",
       "opening_hours": {
-        "open_now": false
+        "open_now": true
       },
       "photos": [
         {

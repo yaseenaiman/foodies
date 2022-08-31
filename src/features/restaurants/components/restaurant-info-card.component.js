@@ -22,7 +22,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     photos = [
       "https://www.citycentremirdif.com/-/media/blogs/2019/june/guilt-free-dining/main-image.jpg?h=600&w=800&la=ar&hash=D2012B65A7D09BC4DE47758AEF3765EDC2FA8E55",
     ],
-    vicinity = "المنصور/شارع 14 رمضان",
+    address = "المنصور/شارع 14 رمضان",
     isOpenNow = true,
     rating = 3.5,
     isClosedTemporarily = true,
@@ -51,7 +51,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
             </Spacer>
           </SectionEnd>
         </Section>
-        <Address>{vicinity}</Address>
+        <Address>{address}</Address>
       </Info>
     </RestaurantCard>
   );
