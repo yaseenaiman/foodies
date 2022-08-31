@@ -35,6 +35,11 @@ const createScreenOptions = ({ route }) => {
     tabBarIcon: ({ size, color }) => (
       <Ionicons name={iconName} size={size} color={color} />
     ),
+    tabBarActiveTintColor: "tomato",
+    tabBarInactiveTintColor: "gray",
+    tabBarLabelStyle: {
+      fontFamily: "Changa_500Medium",
+    },
   };
 };
 
@@ -70,13 +75,6 @@ export default function App() {
               <Tab.Navigator
                 initialRouteName="المطاعم"
                 screenOptions={createScreenOptions}
-                tabBarOptions={{
-                  activeTintColor: "tomato",
-                  inactiveTintColor: "gray",
-                  labelStyle: {
-                    fontFamily: "Changa_500Medium",
-                  },
-                }}
               >
                 <Tab.Screen
                   options={{ headerShown: false }}
