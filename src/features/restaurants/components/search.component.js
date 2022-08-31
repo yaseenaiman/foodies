@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import styled from "styled-components/native";
 import { Searchbar } from "react-native-paper";
-
 import { LocationContext } from "../../../services/location/location.context";
 
 const SearchContainer = styled.View`
@@ -15,8 +14,9 @@ export const Search = () => {
   return (
     <SearchContainer>
       <Searchbar
+        inputStyle={{ fontFamily: "Changa_500Medium" }}
         textAlign="right"
-        placeholder="ابحث عن موقع"
+        placeholder="ادخل اسم المدينة"
         value={searchKeyword}
         onSubmitEditing={() => {
           search(searchKeyword);
