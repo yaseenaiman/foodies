@@ -35,3 +35,9 @@ export const Address = styled.Text`
 export const Info = styled.View`
   padding: ${(props) => props.theme.space[3]};
 `;
+
+export const ItemList = styled.View`
+  font-family: ${(props) => props.theme.fonts.body};
+  font-size: ${(props) => props.theme.fontSizes.caption};
+  text-align: right;
+`;
