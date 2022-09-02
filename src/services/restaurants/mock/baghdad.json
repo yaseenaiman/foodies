@@ -42,17 +42,17 @@
     {
       "geometry": {
         "location": {
-          "lat": 33.3104805,
-          "lng": 4.405177
+          "lat": 33.3104834,
+          "lng": 44.3355567
         },
         "viewport": {
           "northeast": {
-            "lat": 33.3104805,
-            "lng": 44.3389056
+            "lat": 33.3104834,
+            "lng": 44.3355567
           },
           "southwest": {
-            "lat": 33.3104805,
-            "lng": 44.3389056
+            "lat": 33.3104834,
+            "lng": 44.3355567
           }
         }
       },
@@ -89,17 +89,17 @@
       "business_status": "CLOSED_TEMPORARILY",
       "geometry": {
         "location": {
-          "lat": 33.3104805,
-          "lng": 44.3389056
+          "lat": 33.27965,
+          "lng": 44.3851
         },
         "viewport": {
           "northeast": {
-            "lat": 33.3104805,
-            "lng": 44.3389056
+            "lat": 33.2796,
+            "lng": 44.3851
           },
           "southwest": {
-            "lat": 33.3104805,
-            "lng": 44.3389056
+            "lat": 33.2796,
+            "lng": 44.3851
           }
         }
       },

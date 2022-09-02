@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { Text } from "../../components/typography/text.components";
+import { MapScreen } from "../../features/map/screens/map.screen";
 
 import { RestaurantsNavigator } from "./restaurants.navigator";
 import { SafeArea } from "../../components/utility/safe-area.component";
@@ -34,11 +35,6 @@ const Settings = () => (
     <Text>الاعدادات</Text>
   </SafeArea>
 );
-const Map = () => (
-  <SafeArea>
-    <Text>الموقع</Text>
-  </SafeArea>
-);
 export const AppNavigator = () => (
   <NavigationContainer>
     <Tab.Navigator
@@ -53,7 +49,7 @@ export const AppNavigator = () => (
       <Tab.Screen
         options={{ headerShown: false }}
         name="الموقع"
-        component={Map}
+        component={MapScreen}
       />
       <Tab.Screen
         options={{ headerShown: false }}
