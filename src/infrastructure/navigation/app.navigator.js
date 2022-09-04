@@ -1,5 +1,4 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { Text } from "../../components/typography/text.components";
@@ -36,26 +35,21 @@ const Settings = () => (
   </SafeArea>
 );
 export const AppNavigator = () => (
-  <NavigationContainer>
-    <Tab.Navigator
-      initialRouteName="المطاعم"
-      screenOptions={createScreenOptions}
-    >
-      <Tab.Screen
-        options={{ headerShown: false }}
-        name="الاعدادات"
-        component={Settings}
-      />
-      <Tab.Screen
-        options={{ headerShown: false }}
-        name="الموقع"
-        component={MapScreen}
-      />
-      <Tab.Screen
-        options={{ headerShown: false }}
-        name="المطاعم"
-        component={RestaurantsNavigator}
-      />
-    </Tab.Navigator>
-  </NavigationContainer>
+  <Tab.Navigator initialRouteName="المطاعم" screenOptions={createScreenOptions}>
+    <Tab.Screen
+      options={{ headerShown: false }}
+      name="الاعدادات"
+      component={Settings}
+    />
+    <Tab.Screen
+      options={{ headerShown: false }}
+      name="الموقع"
+      component={MapScreen}
+    />
+    <Tab.Screen
+      options={{ headerShown: false }}
+      name="المطاعم"
+      component={RestaurantsNavigator}
+    />
+  </Tab.Navigator>
 );

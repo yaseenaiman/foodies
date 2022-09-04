@@ -7,6 +7,7 @@ import { FavouritesContextProvider } from "./src/services/favourites/favourites.
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
+import { AuthenticationContextProvider } from "./src/services/authentication/authentication.context";
 
 import {
   useFonts as useChanga,
@@ -26,9 +27,8 @@ const firebaseConfig = {
   projectId: "foody-b06dc",
   storageBucket: "foody-b06dc.appspot.com",
   messagingSenderId: "14316139209",
-  appId: "1:14316139209:web:93a007783f4b6923941318"
+  appId: "1:14316139209:web:93a007783f4b6923941318",
 };
-
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
@@ -40,22 +40,6 @@ if (!firebase.apps.length) {
 export { auth, db };
 
 export default function App() {
-
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      firebase
-        .auth()
-        .signInWithEmailAndPassword("yaseenaiman17@gmail.com", "ommmm2468")
-        .then((user) => {
-          setIsAuthenticated(true);
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    }, 2000);
-  }, []);
-
   const [changaLoaded] = useChanga({
     Changa_500Medium,
   });
@@ -67,18 +51,19 @@ export default function App() {
   if (!changaLoaded || !changaLoadedB) {
     return null;
   }
-  if (!isAuthenticated) return null;
 
   return (
     <>
       <ThemeProvider theme={theme}>
-        <FavouritesContextProvider>
-          <LocationContextProvider>
-            <RestaurantsContextProvider>
-              <Navigation />
-            </RestaurantsContextProvider>
-          </LocationContextProvider>
-        </FavouritesContextProvider>
+        <AuthenticationContextProvider>
+          <FavouritesContextProvider>
+            <LocationContextProvider>
+              <RestaurantsContextProvider>
+                <Navigation />
+              </RestaurantsContextProvider>
+            </LocationContextProvider>
+          </FavouritesContextProvider>
+        </AuthenticationContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>
