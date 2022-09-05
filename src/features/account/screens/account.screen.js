@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Text } from "../../../components/typography/text.components";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import {
   AccountBackground,
@@ -20,7 +20,7 @@ export const AccountScreen = ({ navigation }) => {
           mode="contained"
           onPress={() => navigation.navigate("Login")}
         >
-          Login
+          <Text variant="textButton"> سجل دخول</Text>
         </AuthButton>
         <Spacer size="large">
           <AuthButton
@@ -28,7 +28,7 @@ export const AccountScreen = ({ navigation }) => {
             mode="contained"
             onPress={() => navigation.navigate("Register")}
           >
-            Register
+            <Text variant="textButton"> سجل حساب</Text>
           </AuthButton>
         </Spacer>
       </AccountContainer>
