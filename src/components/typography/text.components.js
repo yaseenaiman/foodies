@@ -44,12 +44,24 @@ const label = (theme) => `
 
 `;
 
+const textButton = (theme) => `
+font-family: ${theme.fonts.body};
+font-weight: ${theme.fontWeights.regular};
+color: ${theme.colors.text.inverse};
+flex-wrap: wrap;
+margin-top: 0px;
+margin-bottom: 0px;
+text-align: right;
+
+`;
+
 const variants = {
   body,
   label,
   caption,
   error,
   hint,
+  textButton,
 };
 
 export const Text = styled.Text`

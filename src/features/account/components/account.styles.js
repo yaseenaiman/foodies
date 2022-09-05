@@ -31,6 +31,8 @@ export const AuthButton = styled(Button).attrs({
 
 export const AuthInput = styled(TextInput)`
   width: 300px;
+  text-align: right;
+  font-family: ${(props) => props.theme.fonts.body};
 `;
 
 export const Title = styled(Text)`

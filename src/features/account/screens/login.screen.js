@@ -24,7 +24,7 @@ export const LoginScreen = ({ navigation }) => {
       <Title>Foody</Title>
       <AccountContainer>
         <AuthInput
-          label="E-mail"
+          label={<Text variant="body">البريد الالكتروني</Text>}
           value={email}
           textContentType="emailAddress"
           keyboardType="email-address"
@@ -33,7 +33,7 @@ export const LoginScreen = ({ navigation }) => {
         />
         <Spacer size="large">
           <AuthInput
-            label="Password"
+            label={<Text variant="body">كلمة المرور</Text>}
             value={password}
             textContentType="password"
             secureTextEntry
@@ -53,7 +53,7 @@ export const LoginScreen = ({ navigation }) => {
               mode="contained"
               onPress={() => onLogin(email, password)}
             >
-              Login
+              <Text variant="textButton"> سجل دخول</Text>
             </AuthButton>
           ) : (
             <ActivityIndicator animating={true} color={Colors.blue300} />
@@ -62,7 +62,7 @@ export const LoginScreen = ({ navigation }) => {
       </AccountContainer>
       <Spacer size="large">
         <AuthButton mode="contained" onPress={() => navigation.goBack()}>
-          Back
+          <Text variant="textButton">رجوع</Text>
         </AuthButton>
       </Spacer>
     </AccountBackground>

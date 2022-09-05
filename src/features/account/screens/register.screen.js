@@ -25,7 +25,7 @@ export const RegisterScreen = ({ navigation }) => {
       <Title>Foody</Title>
       <AccountContainer>
         <AuthInput
-          label="E-mail"
+          label={<Text variant="body">البريد الالكتروني</Text>}
           value={email}
           textContentType="emailAddress"
           keyboardType="email-address"
@@ -34,7 +34,7 @@ export const RegisterScreen = ({ navigation }) => {
         />
         <Spacer size="large">
           <AuthInput
-            label="Password"
+            label={<Text variant="body">كلمة المرور</Text>}
             value={password}
             textContentType="password"
             secureTextEntry
@@ -44,7 +44,7 @@ export const RegisterScreen = ({ navigation }) => {
         </Spacer>
         <Spacer size="large">
           <AuthInput
-            label="Repeat Password"
+            label={<Text variant="body">أعد كتابة كلمة المرور</Text>}
             value={repeatedPassword}
             textContentType="password"
             secureTextEntry
@@ -64,7 +64,7 @@ export const RegisterScreen = ({ navigation }) => {
               mode="contained"
               onPress={() => onRegister(email, password, repeatedPassword)}
             >
-              Register
+              <Text variant="textButton"> سجل حساب</Text>
             </AuthButton>
           ) : (
             <ActivityIndicator animating={true} color={Colors.blue300} />
@@ -73,7 +73,7 @@ export const RegisterScreen = ({ navigation }) => {
       </AccountContainer>
       <Spacer size="large">
         <AuthButton mode="contained" onPress={() => navigation.goBack()}>
-          Back
+          <Text variant="textButton"> رجوع</Text>
         </AuthButton>
       </Spacer>
     </AccountBackground>
