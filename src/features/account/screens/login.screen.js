@@ -24,7 +24,8 @@ export const LoginScreen = ({ navigation }) => {
       <Title>Foody</Title>
       <AccountContainer>
         <AuthInput
-          label={<Text variant="body">البريد الالكتروني</Text>}
+          placeholder={"البريد الالكتروني"}
+          placeholderTextColor={"black"}
           value={email}
           textContentType="emailAddress"
           keyboardType="email-address"
@@ -33,7 +34,8 @@ export const LoginScreen = ({ navigation }) => {
         />
         <Spacer size="large">
           <AuthInput
-            label={<Text variant="body">كلمة المرور</Text>}
+            placeholder={"كلمة المرور "}
+            placeholderTextColor={"black"}
             value={password}
             textContentType="password"
             secureTextEntry

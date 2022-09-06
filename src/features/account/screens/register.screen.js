@@ -25,7 +25,8 @@ export const RegisterScreen = ({ navigation }) => {
       <Title>Foody</Title>
       <AccountContainer>
         <AuthInput
-          label={<Text variant="body">البريد الالكتروني</Text>}
+          placeholder={"البريد الالكتروني"}
+          placeholderTextColor={"black"}
           value={email}
           textContentType="emailAddress"
           keyboardType="email-address"
@@ -34,7 +35,8 @@ export const RegisterScreen = ({ navigation }) => {
         />
         <Spacer size="large">
           <AuthInput
-            label={<Text variant="body">كلمة المرور</Text>}
+            placeholder={"كلمة المرور "}
+            placeholderTextColor={"black"}
             value={password}
             textContentType="password"
             secureTextEntry
@@ -44,7 +46,8 @@ export const RegisterScreen = ({ navigation }) => {
         </Spacer>
         <Spacer size="large">
           <AuthInput
-            label={<Text variant="body">أعد كتابة كلمة المرور</Text>}
+            placeholder={" تأكيد كلمة المرور "}
+            placeholderTextColor={"black"}
             value={repeatedPassword}
             textContentType="password"
             secureTextEntry
