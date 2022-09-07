@@ -9,7 +9,6 @@ import { Spacer } from "../../../components/spacer/spacer.component";
 const AvatarContainer = styled.View`
   align-items: center;
   padding: ${(props) => props.theme.space[2]};
-
 `;
 
 export const SettingsScreen = ({ navigation }) => {
