@@ -1,11 +1,12 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
-import { Text } from "../../components/typography/text.components";
 import { MapScreen } from "../../features/map/screens/map.screen";
-
 import { RestaurantsNavigator } from "./restaurants.navigator";
-import { SafeArea } from "../../components/utility/safe-area.component";
+import { RestaurantsContextProvider } from "../../services/restaurants/restaurants.context";
+import { LocationContextProvider } from "../../services/location/location.context";
+import { FavouritesContextProvider } from "../../services/favourites/favourites.context";
+import { SettingsNavigator } from "./settings.navigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -29,27 +30,31 @@ const createScreenOptions = ({ route }) => {
   };
 };
 
-const Settings = () => (
-  <SafeArea>
-    <Text>الاعدادات</Text>
-  </SafeArea>
-);
 export const AppNavigator = () => (
-  <Tab.Navigator initialRouteName="المطاعم" screenOptions={createScreenOptions}>
-    <Tab.Screen
-      options={{ headerShown: false }}
-      name="الاعدادات"
-      component={Settings}
-    />
-    <Tab.Screen
-      options={{ headerShown: false }}
-      name="الموقع"
-      component={MapScreen}
-    />
-    <Tab.Screen
-      options={{ headerShown: false }}
-      name="المطاعم"
-      component={RestaurantsNavigator}
-    />
-  </Tab.Navigator>
+  <FavouritesContextProvider>
+    <LocationContextProvider>
+      <RestaurantsContextProvider>
+        <Tab.Navigator
+          initialRouteName="المطاعم"
+          screenOptions={createScreenOptions}
+        >
+          <Tab.Screen
+            options={{ headerShown: false }}
+            name="الاعدادات"
+            component={SettingsNavigator}
+          />
+          <Tab.Screen
+            options={{ headerShown: false }}
+            name="الموقع"
+            component={MapScreen}
+          />
+          <Tab.Screen
+            options={{ headerShown: false }}
+            name="المطاعم"
+            component={RestaurantsNavigator}
+          />
+        </Tab.Navigator>
+      </RestaurantsContextProvider>
+    </LocationContextProvider>
+  </FavouritesContextProvider>
 );

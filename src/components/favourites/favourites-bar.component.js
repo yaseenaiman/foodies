@@ -1,6 +1,6 @@
 import React from "react";
 import { Text } from "../typography/text.components";
-import { ScrollView, TouchableOpacity } from "react-native";
+import { StyleSheet, ScrollView, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
 import { Spacer } from "../spacer/spacer.component";
 import { CompactRestaurantInfo } from "../restaurant/compact-restaurant-info.component";
@@ -17,8 +17,11 @@ export const FavouritesBar = ({ favourites, onNavigate }) => {
       <Spacer position="right" size="large">
         <Text variant="caption">المفضلة</Text>
       </Spacer>
-
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+      <ScrollView
+        style={styles.scrollstyle}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+      >
         {favourites.map((restaurant) => {
           const key = restaurant.name;
           return (
@@ -39,3 +42,10 @@ export const FavouritesBar = ({ favourites, onNavigate }) => {
     </FavouritesWrapper>
   );
 };
+
+const styles = StyleSheet.create({
+  scrollstyle: {
+    flexDirection: "row-reverse",
+    direction: "rtl",
+  },
+});
