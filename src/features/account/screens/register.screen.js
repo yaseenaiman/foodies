@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { ActivityIndicator, Colors } from "react-native-paper";
+import { colors } from "../../../infrastructure/theme/colors";
 
 import {
   AccountBackground,
@@ -26,7 +27,7 @@ export const RegisterScreen = ({ navigation }) => {
       <AccountContainer>
         <AuthInput
           placeholder={"البريد الالكتروني"}
-          placeholderTextColor={"black"}
+          placeholderTextColor={colors.text.primary}
           value={email}
           textContentType="emailAddress"
           keyboardType="email-address"
@@ -36,7 +37,7 @@ export const RegisterScreen = ({ navigation }) => {
         <Spacer size="large">
           <AuthInput
             placeholder={"كلمة المرور "}
-            placeholderTextColor={"black"}
+            placeholderTextColor={colors.text.primary}
             value={password}
             textContentType="password"
             secureTextEntry
@@ -47,7 +48,7 @@ export const RegisterScreen = ({ navigation }) => {
         <Spacer size="large">
           <AuthInput
             placeholder={" تأكيد كلمة المرور "}
-            placeholderTextColor={"black"}
+            placeholderTextColor={colors.text.primary}
             value={repeatedPassword}
             textContentType="password"
             secureTextEntry
