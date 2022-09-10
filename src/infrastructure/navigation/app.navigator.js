@@ -23,8 +23,8 @@ const createScreenOptions = ({ route }) => {
     tabBarIcon: ({ size, color }) => (
       <Ionicons name={iconName} size={size} color={color} />
     ),
-    activeTintColor: colors.brand.primary,
-    inactiveTintColor: colors.brand.muted,
+    tabBarActiveTintColor: colors.brand.primary,
+    tabBarInactiveTintColor: colors.brand.muted,
     tabBarLabelStyle: {
       fontFamily: "Changa_500Medium",
     },
