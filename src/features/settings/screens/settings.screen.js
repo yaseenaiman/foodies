@@ -5,6 +5,7 @@ import { SafeArea } from "../../../components/utility/safe-area.component";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
 import styled from "styled-components/native";
 import { Text } from "react-native";
+import { colors } from "../../../infrastructure/theme/colors";
 import { Spacer } from "../../../components/spacer/spacer.component";
 const AvatarContainer = styled.View`
   align-items: center;
@@ -16,8 +17,11 @@ export const SettingsScreen = ({ navigation }) => {
   return (
     <SafeArea>
       <AvatarContainer>
-        <Avatar.Icon size={180} icon="human" backgroundColor="#2182BD" />
-
+        <Avatar.Icon
+          size={180}
+          icon="human"
+          backgroundColor={colors.brand.primary}
+        />
         <Spacer position="top" size="large">
           <Text style={styles.textSetting}>{user.email}</Text>
         </Spacer>

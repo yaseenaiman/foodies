@@ -7,6 +7,7 @@ import { RestaurantsContextProvider } from "../../services/restaurants/restauran
 import { LocationContextProvider } from "../../services/location/location.context";
 import { FavouritesContextProvider } from "../../services/favourites/favourites.context";
 import { SettingsNavigator } from "./settings.navigator";
+import { colors } from "../../infrastructure/theme/colors";
 
 const Tab = createBottomTabNavigator();
 
@@ -22,8 +23,8 @@ const createScreenOptions = ({ route }) => {
     tabBarIcon: ({ size, color }) => (
       <Ionicons name={iconName} size={size} color={color} />
     ),
-    tabBarActiveTintColor: "tomato",
-    tabBarInactiveTintColor: "gray",
+    activeTintColor: colors.brand.primary,
+    inactiveTintColor: colors.brand.muted,
     tabBarLabelStyle: {
       fontFamily: "Changa_500Medium",
     },
