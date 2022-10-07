@@ -1,12 +1,12 @@
-import baghdad from "./baghdad.json";
-import erbil from "./erbil.json";
+const baghdad = require("./baghdad");
+const erbil = require("./erbil");
 
-export const mocks = {
+module.exports.mocks = {
   "33.3152,44.3661": baghdad,
   "36.1901,43.993": erbil,
 };
 
-export const mockImages = [
+const mockImages = [
   "https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg",
   "https://www.foodiesfeed.com/wp-content/uploads/2019/04/mae-mu-oranges-ice-600x750.jpg",
   "https://www.foodiesfeed.com/wp-content/uploads/2020/08/detail-of-pavlova-strawberry-piece-of-cake-600x800.jpg",
@@ -15,3 +15,9 @@ export const mockImages = [
   "https://www.foodiesfeed.com/wp-content/uploads/2019/02/messy-pizza-on-a-black-table-600x400.jpg",
   "https://www.foodiesfeed.com/wp-content/uploads/2019/02/pizza-ready-for-baking-600x400.jpg",
 ];
+module.exports.addMockImage = (restaurant) => {
+  const randomImage =
+    mockImages[Math.ceil(Math.random() * (mockImages.length - 1))];
+  restaurant.photos = [randomImage];
+  return restaurant;
+};

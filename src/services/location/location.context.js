@@ -14,13 +14,12 @@ export const LocationContextProvider = ({ children }) => {
     setIsLoading(true);
     setKeyword(searchKeyword);
   };
-
   useEffect(() => {
     if (!keyword.length) {
       // don't do anything
       return;
     }
-    locationRequest(keyword.toLowerCase())
+    locationRequest(keyword)
       .then(locationTransform)
       .then((result) => {
         setIsLoading(false);
